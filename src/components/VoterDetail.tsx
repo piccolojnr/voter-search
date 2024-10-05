@@ -12,14 +12,17 @@ const VoterDetails: React.FC<VoterDetailsProps> = ({ voter }) => {
       <h2 className="text-2xl font-bold text-center mb-4">Voter Details</h2>
       <div className="flex items-center mb-4">
         <Image
-          src={voter.detail.picture}
+          // base64 image
+          src={decodeURIComponent(voter.detail.picture)}
           alt="Voter"
           className="w-36 h-36 rounded-full border-2 border-gray-300 mr-4"
+          width={144}
+          height={144}
         />
         <div>
           <h3 className="text-lg font-semibold">{voter.fullName}</h3>
           <p className="text-gray-600">
-            {voter.gender}, {voter.age} years
+            {voter.gender}, {voter.detail.age} years
           </p>
         </div>
       </div>

@@ -35,5 +35,6 @@ export interface IVoterDetail {
     livingStatus: string | null;
     detail: {
         picture: string;
+        age: number;
     };
 };

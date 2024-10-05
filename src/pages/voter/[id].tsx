@@ -21,6 +21,7 @@ function VoterDetailPage() {
 
   useEffect(() => {
     const fetchVoterDetails = async () => {
+      if (!id) return;
       setLoading(true);
       try {
         const response = await axios.get(`/api/voter/${id}`);
