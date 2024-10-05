@@ -43,7 +43,7 @@ export default function Card({ result }: CardProps) {
 
       {/* button */}
       <Link
-        href={`/voter/${result._source.id}`}
+        href={`/voter/${result._source.votersId}`}
         className="bg-blue-500 text-white p-2 rounded-md mt-4 hover:bg-blue-600"
       >
         <i className="pi pi-eye mr-2"></i>
